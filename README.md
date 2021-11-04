@@ -8,10 +8,11 @@ To get the project running run:
 ```shell
 npm install
 npx hardhat node
-npx hardhat run scripts/deploy.js --network localhost
+
 ```
-Make sure the constants in config.js match what you get from running the deploy script.
+In a seperate terminal run the next two commands. The hardhat node must be running at the same time as the npm node for the app to work correctly. Also check that the output of the hardhat run deploy command matches with the config.js file.
 
 ```shell
+npx hardhat run scripts/deploy.js --network localhost
 npm run dev
 ```
