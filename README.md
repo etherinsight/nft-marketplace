@@ -10,7 +10,7 @@ npm install
 npx hardhat node
 
 ```
-Set your browser's metamask to localhost and Import one of the accounts private keys as listed.
+Set your browser's metamask to localhost and Import an account using a private key listed.
 In a seperate terminal run the next two commands. The hardhat node must be running when you run the deploy script. 
 
 
