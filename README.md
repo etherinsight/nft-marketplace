@@ -10,7 +10,7 @@ npm install
 npx hardhat node
 
 ```
-In a seperate terminal run the next two commands. The hardhat node must be running at the same time as the npm node for the app to work correctly. Also check that the output of the hardhat run deploy command matches with the config.js file.
+In a seperate terminal run the next two commands. The hardhat node must be running when you run the deploy script.
 
 ```shell
 npx hardhat run scripts/deploy.js --network localhost
