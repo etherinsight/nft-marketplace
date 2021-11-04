@@ -10,7 +10,9 @@ npm install
 npx hardhat node
 
 ```
-In a seperate terminal run the next two commands. The hardhat node must be running when you run the deploy script.
+Set your browser's metamask to localhost and Import one of the accounts private keys as listed.
+In a seperate terminal run the next two commands. The hardhat node must be running when you run the deploy script. 
+
 
 ```shell
 npx hardhat run scripts/deploy.js --network localhost
