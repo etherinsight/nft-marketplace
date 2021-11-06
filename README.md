@@ -15,6 +15,6 @@ In a seperate terminal run the next two commands. The hardhat node must be runni
 
 
 ```shell
-npx hardhat run scripts/deploy.js --network localhost
+npx hardhat run scripts/deploy.ts --network localhost
 npm run dev
 ```
