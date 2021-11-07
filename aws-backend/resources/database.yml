@@ -1,0 +1,32 @@
+service: serverless-rest-api-with-dynamodb
+
+frameworkVersion: '2'
+provider:
+  name: aws
+  runtime: nodejs14.x
+  
+      
+resources:
+  Resources:
+    TodosDynamoDbTable:
+      Type: 'AWS::DynamoDB::Table'
+      DeletionPolicy: Retain
+      Properties:
+        AttributeDefinitions:
+          -
+            AttributeName: AccountAddress
+            AttributeType: S
+          -
+            AttributeName: TransactionID
+            AttributeType: S
+        KeySchema:
+          -
+            AttributeName: AccountAddress
+            KeyType: HASH
+          -
+            AttributeName: TransactionID
+            KeyType: RANGE
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
