@@ -1,0 +1,32 @@
+service: serverless-rest-api-with-dynamodb
+
+frameworkVersion: '2'
+provider:
+  name: aws
+  runtime: nodejs14.x
+  
+      
+resources:
+  Resources:
+    TodosDynamoDbTable:
+      Type: 'AWS::DynamoDB::Table'
+      DeletionPolicy: Retain
+      Properties:
+        AttributeDefinitions:
+          -
+            AttributeName: OwnerAccountAddress
+            AttributeType: S
+          -
+            AttributeName: NftContractAddress
+            AttributeType: S
+        KeySchema:
+          -
+            AttributeName: OwnerAccountAddress
+            KeyType: HASH
+          -
+            AttributeName: NftContractAddress
+            KeyType: RANGE
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+
