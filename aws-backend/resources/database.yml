@@ -14,6 +14,7 @@ resources:
       Properties:
         AttributeDefinitions:
           -
+<<<<<<< HEAD
             AttributeName: OwnerAccountAddress
             AttributeType: S
           -
@@ -25,6 +26,19 @@ resources:
             KeyType: HASH
           -
             AttributeName: NftContractAddress
+=======
+            AttributeName: AccountAddress
+            AttributeType: S
+          -
+            AttributeName: TransactionID
+            AttributeType: S
+        KeySchema:
+          -
+            AttributeName: AccountAddress
+            KeyType: HASH
+          -
+            AttributeName: TransactionID
+>>>>>>> 8283f63c02b451b001fedbc5265715b0f8bbf411
             KeyType: RANGE
         ProvisionedThroughput:
           ReadCapacityUnits: 1
